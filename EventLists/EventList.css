@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css?family=$font_family");
+
+html,
+.widget-EventList li > div {
+  -webkit-transform: rotateX($rotate_x) rotateY($rotate_y);
+          transform: rotateX($rotate_x) rotateY($rotate_y);
+}
+
+  .newest{
+    transform: scale(2.05, 2.05) !important;
+    transition: all 1s ease !important;
+  }
+  .standard{
+    transform: scale(1, 1) !important;
+    transition: all 1s ease !important;
+  }
+    .skew-container{
+    transform: skew(-20deg);
+    overflow: hidden;
+/*     position: relative; */
+    display: flex;
+  }
+  .antiskew{
+    transform: skew(20deg);
+/*     border-right: 50px solid #fff; */
+/*     border-top: 100px solid transparent;
+    box-shadow: 0 25px 30px rgba(0,0,0,.5);  */
+  }
+  .bit10{
+  	background: black url("https://cdn.twitchalerts.com/twitch-bits/images/hd/10.gif") no-repeat !important;
+  }
+  .bit100{
+    background: black url("https://cdn.twitchalerts.com/twitch-bits/images/hd/100.gif") no-repeat !important;
+  }
+  .bit1000{
+    background: black url("https://cdn.twitchalerts.com/twitch-bits/images/hd/1000.gif") no-repeat !important;}
+  .bit5000{
+    background: black url("https://cdn.twitchalerts.com/twitch-bits/images/hd/5000.gif") no-repeat !important;}
+  .bit10000{
+    background: black url("https://cdn.twitchalerts.com/twitch-bits/images/hd/10000.gif") no-repeat !important;}
+  .bit25000{
+    background: black url("https://cdn.twitchalerts.com/twitch-bits/images/hd/10000.gif") no-repeat !important;}
+  .bit100000{
+    background: black url("https://cdn.twitchalerts.com/twitch-bits/images/hd/100000.gif") no-repeat !important;}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "$font_family";
+  letter-spacing: 1px;
+}
+
+.widget-EventList {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 600px;
+  width: 252px;
+}
+
+.widget-EventList li {
+  height: 0px;
+  overflow: hidden;
+  margin-bottom: 1px;
+  -webkit-animation: grow .4s ease-in 1 forwards;
+          animation: grow .4s ease-in 1 forwards;
+  opacity: .1;
+}
+
+.widget-EventList li:nth-child(1) {
+  opacity: 1;
+}
+
+.widget-EventList li:nth-child(2) {
+  opacity: .75;
+}
+
+.widget-EventList li:nth-child(3) {
+  opacity: .5;
+}
+
+.widget-EventList li:nth-child(4) {
+  opacity: .4;
+}
+
+.widget-EventList li:nth-child(5) {
+  opacity: .3;
+}
+
+.widget-EventList li:nth-child(6) {
+  opacity: .1;
+}
+
+.widget-EventList li:nth-child(7) {
+  opacity: .1;
+}
+
+.widget-EventList li:nth-child(8) {
+  opacity: .1;
+}
+
+.widget-EventList li:nth-child(9) {
+  opacity: .1;
+}
+
+.widget-EventList li:nth-child(10) {
+  opacity: .1;
+}
+
+li div {
+  opacity: 0;
+  padding: 0 50px 0 10px;
+  height: auto;
+  margin-left: 1px;
+  float: left;
+  line-height: 50px;
+  position: relative;
+  color: $text_color;
+  -webkit-animation: info .5s ease-in 1 .6s forwards;
+          animation: info .5s ease-in 1 .6s forwards;
+  background: #ffff;
+  width: 200;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  /* info */
+}
+
+div.background {
+      position: relative;
+    left: 9px;
+  opacity: 0;
+  padding: 0;
+  width: 73px;
+  height: 50px;
+  background-size: 33px 33px !important;
+/*   background-size: 42px 42px !important; */
+/*   background-position: 4px 3px !important; */
+  background-position: 9px 8px !important;
+  background: url("http://uploads.twitchalerts.com/000/070/135/721/star-l.png") no-repeat $theme_color;
+  float: left;
+  margin-left: 0;
+/*   -webkit-animation: icon .5s ease-in 1 .4s forwards;
+          animation: icon .5s ease-in 1 .4s forwards; */
+  /* icon */
+}
+
+.donation .background {
+  background: url("https://blog.threadless.com/blog/wp-content/uploads/2015/04/icon-cash-animated.gif") no-repeat $theme_color;
+}
+
+.twitch-follow .background {
+  background: url("http://www.stickpng.com/assets/images/5845e1677733c3558233c0ee.png") no-repeat $theme_color;
+}
+
+.twitch-bit .background {
+    background: url("http://static1.squarespace.com/static/577df773440243d749090a1c/5a3bf97c0d92970e0e7e892b/5a3bfc08085229addbe2a694/1519965689451/bits100.gif?format=1000w") no-repeat $theme_color;
+}
+
+.twitch-host .background {
+  background: url("https://pa1.narvii.com/6388/7cb3b72d673b57aa7315776ecb2803ffa4eb4c21_hq.gif") no-repeat $theme_color;
+}
+
+.twitch-raid .background {
+  background: url("https://pa1.narvii.com/6388/7cb3b72d673b57aa7315776ecb2803ffa4eb4c21_hq.gif") no-repeat $theme_color;
+}
+
+.twitch-subscription .background {
+  background: url("https://www.freepnglogos.com/uploads/logo-twitch-ios-version-png-0.png") no-repeat $theme_color;
+}
+
+.twitch-resubscription .background {
+  background: url("https://www.freepnglogos.com/uploads/logo-twitch-ios-version-png-0.png") no-repeat $theme_color;
+}
+
+.undefined .background {
+  background: url("https://m.media-amazon.com/images/G/01/sm/landing/Crown._CB513543542_.png") no-repeat $theme_color;
+}
+
+.tag {
+  position: absolute;
+  bottom: 15px;
+  left: 5px;
+  font-size: 12px;
+  color: $text_color;
+  font-family: "$font_family";
+}
+
+.message {
+  position: inherit;
+  bottom: -5px;
+  left: inherit;
+  padding-left: 5px;
+}
+
+@-webkit-keyframes grow {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 50px;
+  }
+}
+
+@keyframes grow {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 50px;
+  }
+}
+
+@-webkit-keyframes icon {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes icon {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes info {
+  0% {
+/*     left: 20px; */
+    opacity: 0;
+  }
+  40% {
+/*     left: 50px; */
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes info {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+/*     left: 20px; */
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+
+}
